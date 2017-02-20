@@ -1,6 +1,6 @@
 name := """scala-consul"""
 
-version := "1.2.0-SNAPSHOT"
+version := "1.2.2-SNAPSHOT"
 
 scalaVersion := "2.11.8"
 
@@ -20,8 +20,16 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-ws"   % "2.5.8"
 )
 
-organization := "com.codacy"
-organizationName := "Codacy"
-organizationHomepage := Some(new URL("https://www.codacy.com"))
+organization := "com.x2sy"
+organizationName := "x2sy"
+organizationHomepage := Some(new URL("http://x2sy.com"))
 
 description := "Consul Scala Client"
+
+publishTo := {
+  val nexus = "http://jci.x2sy.com/nexus/content/repositories/"
+  if (isSnapshot.value)
+    Some("x2sy Snapshots" at nexus + "snapshots/")
+  else
+    Some("x2sy Releases" at nexus + "releases/")
+}
