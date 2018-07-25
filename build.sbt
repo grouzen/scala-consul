@@ -1,6 +1,6 @@
 name := """scala-consul"""
 
-version := "1.2.3-SNAPSHOT"
+version := "1.3.1"
 
 scalaVersion := "2.11.8"
 
@@ -16,8 +16,8 @@ scalacOptions ++= Seq(
 resolvers += "Bintray Typesafe Repo" at "http://dl.bintray.com/typesafe/maven-releases/"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.5.8",
-  "com.typesafe.play" %% "play-ws"   % "2.5.8"
+  "com.typesafe.play" %% "play-json" % "2.5.18",
+  "com.typesafe.play" %% "play-ws"   % "2.5.18"
 )
 
 organization := "com.x2sy"
@@ -33,3 +33,5 @@ publishTo := {
   else
     Some("x2sy Releases" at nexus + "releases/")
 }
+
+credentials += Credentials(Path.userHome / ".ivy2" / ".x2sy-credentials")
