@@ -27,7 +27,7 @@ organizationHomepage := Some(new URL("http://x2sy.com"))
 description := "Consul Scala Client"
 
 publishTo := {
-  val nexus = "http://jci.x2sy.com/nexus/content/repositories/"
+  val nexus = "https://nexus.x2sy.com/repository/"
   if (isSnapshot.value)
     Some("x2sy Snapshots" at nexus + "snapshots/")
   else
